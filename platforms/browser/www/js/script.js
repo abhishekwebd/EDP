@@ -15,6 +15,7 @@ function tabsSwipeCtrlFn() {
     */
   
     function selectPage(indexSelected) {
+        alert(indexSelected);
         indexSelected = sessionStorage.getItem("astat")+indexSelected;
          sessionStorage.setItem("astat",indexSelected);
          if(sessionStorage.getItem("astat") == "02112")
