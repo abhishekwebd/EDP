@@ -1,0 +1,142 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Main</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Creative Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+	/>
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+	<script src="js/index.js"></script>
+	<!-- css files -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/ak.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<!-- online-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<!-- //online-fonts -->
+
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			if(!sessionStorage.getItem("username"))
+			{
+				document.getElementById("empname").innerText = localStorage.getItem("empname");
+				document.getElementById("staffno").innerText = localStorage.getItem("username");
+			}else{
+				document.getElementById("staffno").innerText = sessionStorage.getItem("username");
+				document.getElementById("empname").innerText = sessionStorage.getItem("empname");
+			}
+			loadmonths();
+loadnote();
+		});
+	</script>
+</head>
+
+<body onload="loaddata('nothing')">
+	<div class="loader"></div>
+	<div class="ak-row ak-blue">
+		<div class="ak-cell ak-container ak-blue ak-padding-16">
+			<img src="img/logo.png" width="80px" >
+		</div>
+		<div class="ak-cell ak-container ak-blue">
+			<h3>Personal Information</h3>
+		</div>
+		<div class="ak-cell ak-container ak-blue ak-padding-16">
+			<button class="ak-red"><span class="fa fa-2x fa-power-off " aria-hidden="true" id="logoutbtn" style="color: white;"></span></button>
+		</div>
+	</div>
+	<div class="ak-row ak-padding-16">
+		<div class="ak-cell ak-container">
+			Welcome <span id="empname"></span>/<label id="staffno"></label>
+		</div>
+		<div class="ak-cell ak-container">
+			<select id="month">
+
+			</select>
+		</div>
+	</div>
+
+<!-- Current Date : 
+<script type="text/javascript">
+	var today = new Date();
+	var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+	document.write(date);
+</script> -->
+
+<div class="ak-row ak-blue-grey ak-card-4">
+	<div class="ak-cell ak-container ak-left" >
+		<b>Salary Details</b>
+	</div>
+	<div class="ak-cell ak-container ak-right" >
+		<span id="salmonth"></span>
+	</div>
+</div>
+<table class="ak-table ak-bordered" style="border-width: 5px; border-color: red;">
+	<tr style="color:brown;">
+		<td>Gross Salary</td>
+		<td>Deduction</td>
+		<td>Net Salary</td>
+	</tr>
+	<tr >
+		<td><span id="gross"></span></td>
+		<td><span id="deduct"></span></td>
+		<td><span id="netsal"></span></td>
+	</tr>
+</table>
+
+<div class="ak-row ak-blue-grey ak-hover ak-card-4">
+	<div class="ak-cell ak-container ak-left" >
+		<b>PF Details</b>
+	</div>
+</div>
+<table class="ak-table ak-bordered ak-hover">
+	<tr style="color:brown;">
+		<td>As On Date</td>
+		<td>Net Balance</td>
+	</tr>
+	<tr>
+		<td><span id="pfbalupto"></span></td>
+		<td><span id="pfbal"></span></td>
+		</tr>
+</table>
+
+<div class="ak-row ak-blue-grey ak-hover ak-card-4">
+	<div class="ak-cell ak-container ak-left" >
+		<b>Leave Details</b>
+	</div>
+</div>
+<table class="ak-table ak-bordered ak-hover">
+	<tr style="color:brown;">
+		<td>As On Date</td>
+		<td>LAP</td>
+		<td>LHAP</td>
+	</tr>
+	<tr>
+		<td><span id="leavebalupto"></span></td>
+		<td><span id="leavebal"></span></td>
+		<td><span id="lhap"></span></td>
+		</tr>
+</table>
+<br>
+<b>Note</b> : <label id="note"></label>
+<script src="script/sc_index.js"></script>
+</body>
+
+</html>
