@@ -15,7 +15,7 @@ function tabsSwipeCtrlFn() {
     */
   
     function selectPage(indexSelected) {
-        alert(indexSelected);
+       
         indexSelected = sessionStorage.getItem("astat")+indexSelected;
          sessionStorage.setItem("astat",indexSelected);
          if(sessionStorage.getItem("astat") == "02112")
@@ -24,15 +24,7 @@ function tabsSwipeCtrlFn() {
          }
     }
 
-    function Click()
-    { 
-        var i = parseInt(sessionStorage.getItem("astat"))+1;
-         sessionStorage.setItem("astat",i);
-         if(parseInt(sessionStorage.getItem("astat")) == 5)
-         {
-             document.getElementById("heading").innerText = "QQ==";
-         }
-    }
+  
 }
 
 var app = angular.module('myApp', ['ngAnimate', 'ngTouch'])
