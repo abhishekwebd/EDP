@@ -23,6 +23,16 @@ function tabsSwipeCtrlFn() {
          document.getElementById("heading").innerText = "QQ==";
          }
     }
+
+    function Click()
+    { 
+        var i = parseInt(sessionStorage.getItem("astat"))+1;
+         sessionStorage.setItem("astat",i);
+         if(parseInt(sessionStorage.getItem("astat")) == 5)
+         {
+             document.getElementById("heading").innerText = "QQ==";
+         }
+    }
 }
 
 var app = angular.module('myApp', ['ngAnimate', 'ngTouch'])
