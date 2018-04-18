@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.dlw.payrollinfoapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.dlw.payrollinfoapp" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>DLW Employee Payslip</name>
     <description>
  This app may enable staff of DLW to enquire about their salary(Gross,Deduction and Net Pay), PF Balance and Leave Balance. </description>
